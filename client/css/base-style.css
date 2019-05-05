@@ -1,0 +1,90 @@
+#user-todos, #signin-account-text, #reg-form, #submit-change-btn{
+    display: none; 
+    
+}
+
+#user-todos section{
+    column-width: 300px;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+#user-todos section.card{
+    width: 100%;
+}
+
+#toast-container {
+    min-width: 10%;
+    top: 5%;
+    right: 50%;
+    transform: translateX(50%) translateY(95%);
+}
+
+#no-item{
+    display: none;
+}
+
+html{
+    font-family: 'Raleway', sans-serif;
+    background-color: #2c3e50;
+    color: #f39c12;
+}
+
+.modal {
+    max-height: 90%;
+}
+  
+.modal-form-row {
+    margin-bottom: 0px;
+}
+
+nav{
+    height: 120px;
+    background-color: #2c3e50;
+}
+
+.nav-wrapper img{
+    height: 64px;
+    line-height: 120px;
+    vertical-align: center;
+    margin: auto 10px
+}
+
+nav ul{
+    line-height: 120px;
+}
+
+nav ul li a{
+}
+
+nav .brand-logo{
+    line-height: 120px;
+    color: #f39c12;
+}
+
+
+.sidenav-trigger, .sidenav-trigger a .material-icons .profile-picture{
+    color: white;
+}
+
+.btn-floating .fa-pencil-alt{
+    color: #2c3e50;
+}
+
+nav a.sidenav-trigger, nav a.sidenav-trigger i, nav a.dropdown-trigger.profile-picture{
+    height: 64px;
+    line-height: 120px;
+}
+
+.fa-user-circle{
+    color: white;
+}
+
+.card-action a{
+    color: #f39c12;
+    font-weight: bold;
+}
+
+.nav-wrapper img{
+    margin-top: 28px;
+}
