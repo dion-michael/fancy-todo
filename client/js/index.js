@@ -26,7 +26,7 @@ $("#todoForm").submit(function(event){
     })
     let stroftask = (JSON.stringify(arrOfTasks))
     $.ajax({
-        url: `http://localhost:3000/todo`,
+        url: `http://104.154.192.253:3000/todo`,
         method: "POST",
         headers: {
             token: localStorage.getItem("token")
@@ -121,7 +121,7 @@ function init(){
 function signInByEmail(email, password){
     
     $.ajax({
-        url: `http://localhost:3000/user/emailSignIn`,
+        url: `http://104.154.192.253:3000/user/emailSignIn`,
         method: "POST",
         headers: {
             token: localStorage.getItem("token")
@@ -145,7 +145,7 @@ function signInByEmail(email, password){
 
 function registerEmail(name, email, password){
     $.ajax({
-        url: `http://localhost:3000/user`,
+        url: `http://104.154.192.253:3000/user`,
         method: "POST",
         headers: {
             token: localStorage.getItem("token")
@@ -234,7 +234,7 @@ function populate(){
 
 function populateTodos(){
     $.ajax({
-        url: `http://localhost:3000/user/${localStorage.getItem("name")}`,
+        url: `http://104.154.192.253:3000/user/${localStorage.getItem("name")}`,
         method: "GET",
         headers: {
             token: localStorage.getItem("token")
@@ -329,7 +329,7 @@ function deleteTodo(todoId){
     }).then((result) => {
         if (result.value) {
             $.ajax({
-                url: `http://localhost:3000/todo/${todoId}`,
+                url: `http://104.154.192.253:3000/todo/${todoId}`,
                 method: "DELETE",
                 headers: {
                     token: localStorage.getItem("token")
@@ -344,7 +344,7 @@ function deleteTodo(todoId){
 function onSignIn(googleUser) {
     let id_token = googleUser.getAuthResponse().id_token
     $.ajax({
-        url: "http://localhost:3000/user/signIn",
+        url: "http://104.154.192.253:3000/user/signIn",
         method: "POST",
         headers: {
             id_token

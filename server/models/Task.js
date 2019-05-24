@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://localhost/flatodo', {useNewUrlParser: true})
+mongoose.connect(process.env.DB_PATH, {useNewUrlParser: true})
 const Schema = mongoose.Schema
 const taskSchema = new Schema({
     todo_id     : { type: Schema.Types.ObjectId, ref: 'Todos' },

@@ -1,12 +1,17 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-mongoose.connect('mongodb://localhost/flatodo', {useNewUrlParser: true})
+mongoose.connect(process.env.DB_PATH, {
+    useNewUrlParser: true
+})
 const Schema = mongoose.Schema
 const userSchema = new Schema({
     name: String,
     email: String,
     password: String,
-    todos: [{ type: Schema.Types.ObjectId, ref: 'Todos' }],
+    todos: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Todos'
+    }],
     picture: String
 })
 
